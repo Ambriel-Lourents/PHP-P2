@@ -12,6 +12,15 @@
     <?php
     
     echo "<p>Hello World!</p>"
+
+    // Hierdoor komt "Hello World" op het scherm
+   
+/*
+    Parse error: syntax error, unexpected end of file in C:\xampp\htdocs\programmeren-php\index.php on line 12
+    Dit betekent dat er geen ; op het einde is van line 12, oftwel unexpected end of file    
+    */
+
+        # PHP close tag
    
     ?>
     
