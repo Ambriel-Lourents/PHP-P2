@@ -8,11 +8,11 @@
 </head>
 <body>
     <?php
-    $num = 21;
+    $num = 69;
     if ($num % 2 == 0) {
         echo "Is het getal $num even? Ja";
     } else {
-        echo "Is het getal $num even? Nee";
+        echo "Is het getal $num even? Nee" ; 
     }
     ?>
 </body>
