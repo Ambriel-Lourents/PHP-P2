@@ -13,61 +13,50 @@
 
     <form action="" method="post">
         Getal 1
-        <input type="number" name="getal1" /> <br>
-        <input type="radio" name="rad1" />Optellen
-        <input type="radio" name="rad2" />Aftrekken
-        <input type="radio" name="rad3" />Vermenigvuldigen
-        <input type="radio" name="rad4" />Delen <br>
+        <input type="number" name="getal" "/> <br>
+        <input type="radio" name="rad1""/>Optellen
+        <input type="radio" name="rad2" " />Aftrekken
+        <input type="radio" name="rad3" " />Vermenigvuldigen
+        <input type="radio" name="rad4" " />Delen <br>
         Getal 2
-        <input type="number" name="getal2" /> <br>
-        <button type="submit" name="berekenen">Berekenen</button>
+        <input type="number" name="getall" " /> <br>
+        <button type="submit" name="submit" ">Berekenen</button>
     </form>
 
     <?php
-
-    if (isset($_POST['berekenen'])) {
+  
+    if (isset($_POST['submit'])) {
         if (isset($_POST['rad1'])) {
-            $_optellen = $_POST['rad1'];
-            if (isset($_POST['rad2'])) {
-            $_aftrekken = $_POST['rad2'];
-            if (isset($_POST['rad3'])) {
-                $_Vermenigvuldigen = $_POST['rad3'];
-                if (isset($_POST['rad4'])) {
-                    $_delen = $_POST['rad4'];
-                    if (isset($_POST['getal1'])) {
-                        $_value1 = $_POST['getal1'];
-                        if (isset($_POST['getal2'])) {
-                            $_value2 = $_POST['getal2'];
+            $optellen = $_POST['rad1'];
 
+            $answer1 = ($_POST['getal']) + ($_POST['getall']);
 
-        if (isset($_POST['rad1'])) {
-            $answer = ($getal1 + $getal2);
+            echo " $answer1 ";
+        }
+            if (isset($_POST['rad2'])){
+            $aftrekken = $_POST['rad2'];
+            $answer2 = ($_POST['getal']) - ($_POST['getall']);
 
-            if (isset($_POST['rad2'])) {
-                $answer =  $getal1 - $getal2;
-
-                if (isset($_POST['rad3'])) {
-                    $answer = ($_POST['$getal1']) * ($_POST['$getal2']);
-
-
-                    if (isset($_POST['rad4'])) {
-                        $answer =   ($_POST['$getal1'] / $getal2);
-
-
-
-                        echo  "$answer";
-                    }
-                }
+            echo " $answer2";
             }
+
+            if (isset($_POST['rad3'])){
+            $multiply = $_POST['rad3'];
+
+            $answer3= ($_POST['getal']) * ($_POST['getall']);
+
+            echo " $answer3";
+            }
+
+            if (isset($_POST['rad4'])){
+            $divide = $_POST['rad4'];
+
+            $answer4= ($_POST['getal']) / ($_POST['getall']);
+
+            echo " $answer4";
         }
     }
-                    }}}}}}
-
-
-
-
-
-    ?>
+?>
 
 
 
