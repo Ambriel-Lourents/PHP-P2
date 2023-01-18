@@ -12,22 +12,37 @@
 
 
 
-<form method="post">
-    <label for="value">Enter a value:</label>
-    <input type="text" name="value" id="value">
-    <select name="percent">
-        <option value=".1">9%</option>
-        <option value=".2">21%</option>
-    </select>
-    <input type="submit" name="submit" value="Calculate">
+<form method="post" action="">
+
+<input type ="number" name="input"/>Bedrag exclusief BTW<br>
+<input type="radio" name="percent1"/> Laag, 9%<br>
+<input type="radio" name="percent2"/>Hoog, 21%<br>
+<input type="submit" name="submit" /><br>
+
 </form>
+    
 <?php
-if (isset($_POST['submit'])) {
-    $value = $_POST['value'];
-    $percent = $_POST['percent'];
-    $result = $value * $percent;
-    echo ($percent / 100) * ".% of $value is $result" ;
+
+if(isset($_POST['submit'])){
+    if(isset($_POST['percent1'])){
+$percent1 = 9;
+$answer1 = ($_POST['input']) / 100 * $percent1 + ($_POST['input']) ;
+
+echo "Bedrag inclusief $percent1% BTW : $answer1";
 }
+if(isset($_POST['submit'])){
+    if(isset($_POST['percent2'])){
+$percent2 = 21;
+$answer2 = ($_POST['input']) / 100 * $percent2 + ($_POST['input']) ;
+
+echo "Bedrag inclusief $percent2% BTW : $answer2";
+}
+
+}
+}
+
+
+
 ?>
 
 </body>
