@@ -24,8 +24,8 @@
         if (isset($_POST['getal'])) {
             $getal = $_POST['getal'];
             if (isset($_POST['korting'])) {
-            $korting = $_POST['korting'];
-$answer = ($_POST['getal']) / 100 * ($_POST['korting']) - $getal;
+            $korting = 100 - $_POST['korting'] ;
+$answer = ($_POST['getal']) / 100 * $korting;
 
 
             echo " Bedrag inclusief $korting% korting: $answer ";
