@@ -22,22 +22,22 @@
   </form>
 
   <?php
-    if (isset($_POST['submit'])) {
-        $value = ($_POST['input']);
-        $percent = ($_POST['percent']);
+  if (isset($_POST['submit'])) {
+    $value = ($_POST['input']);
+    $percent = ($_POST['percent']);
 
 
-        if ($percent == "laag") {
-            echo "checked='checked'";
-        }
-        if ($percent == "hoog") {
-            echo "checked='checked'";
-        }
-
-$answer = number_format($value + ($value / 100 * $percent));
-        echo "Bedrag inclusief $percent%  BTW:  $answer" ;
+    if ($percent == "laag") {
+      echo "checked='checked'";
     }
-    ?>
+    if ($percent == "hoog") {
+      echo "checked='checked'";
+    }
+
+    $answer = number_format($value + ($value / 100 * $percent));
+    echo "Bedrag inclusief $percent%  BTW:  $answer";
+  }
+  ?>
 
 </body>
 
