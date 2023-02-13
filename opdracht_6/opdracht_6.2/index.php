@@ -19,8 +19,8 @@
         <input type="radio" name="rad" value="multiply" " />Vermenigvuldigen
         <input type="radio" name="rad" value="divide" " />Delen <br>
         Getal 2
-        <input type="number" name="getall" " /> <br>
-        <button type="submit" name="submit" ">Berekenen</button>
+        <input type=" number" name="getall" " /> <br>
+        <button type=" submit" name="submit" ">Berekenen</button>
     </form>
 
     <?php
