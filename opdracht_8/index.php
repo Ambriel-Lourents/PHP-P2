@@ -22,11 +22,20 @@ td {
 
 </head>
 <body>
+
+
+<form action="" method="post">
+<input type="text" name="amount">
+<input type="submit" name="submit">
+
+</form>
     
 
 <?php
 
-$number = 7;
+if (isset($_POST['submit'])) {
+$number = $_POST['amount'];
+
 echo "<table border='1'>";
 for ($i = 1; $i <= 10; $i++){
 echo "<tr>";
@@ -35,6 +44,7 @@ echo "<td> x </td>";
 echo "<td>$number</td>";
 echo "<td>=</td>";
 echo "<td>" . ($i * $number) . "</td>";
+}
 echo "</tr>";
 }
 echo "</table>";
